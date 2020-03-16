@@ -3,6 +3,7 @@ body {
     margin: 0;
     /*background-color: #1C1C1C;*/
     background-color: #000000;
+    font-family: "Inconsolata";
 }
 canvas {
     display: block;
@@ -14,10 +15,69 @@ canvas {
     /*right: 0;*/
 }
 
+a {
+    color: #000;
+}
+
 .canvasZero {
     z-index: 0;
 }
 
 .canvasOne {
     z-index: 1;
+}
+
+.title {
+    font-size: 2em;
+    margin-bottom: 1em;
+    display: block;
+    /*background: red;*/
+    line-height: 1rem;
+}
+
+#info {
+    position: absolute;
+    display: block;
+    top: 2rem;
+    left: 2rem;
+    width: 400px;
+    /*height: 100px;*/
+    background: #BDBDBD;
+    z-index: 2;
+    padding: 2rem;
+}
+
+#separator {
+    border-top: 1px solid black;
+    padding-top: 2rem;
+    padding-bottom: 0rem;
+}
+
+#button {
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    right: 0.125em;
+    top: 0.125em;
+    /*background: red;*/
+    text-align: center;
+    font-size: 48px;
+    /*border: 1px solid black;*/
+    cursor: pointer;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    text-indent: 2rem;
+    /*background: blue;*/
+    line-height: 1.35em;
+}
+
+.noindent {
+    text-indent: 0em;
+}
+
+.doctext {
+    padding: 0 0 2rem 0;
 }

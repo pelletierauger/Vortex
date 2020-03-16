@@ -30,6 +30,7 @@ for (let i = 0; i < 1000000; i++) {
 }
 vertices = new Float32Array(vertices);
 let currentSceneIndex;
+let infoDiv, infoButton;
 
 function setup() {
     // socket = io.connect('http://localhost:8080');
@@ -52,7 +53,18 @@ function setup() {
 
     // gl = canvasDOM.getContext('webgl', { premultipliedAlpha: false });
 
+    infoDiv = document.getElementById("info");
+    infoButton = document.getElementById("button");
 
+    infoButton.onclick = function() {
+        infoDiv.style.display = "none";
+        //validation code to see State field is mandatory.  
+    };
+
+    canvasDOM.onclick = function() {
+
+        incrementScene();
+    };
 
     // gl.colorMask(false, false, false, true);
     // gl.colorMask(false, false, false, true);
@@ -335,9 +347,7 @@ function keyPressed() {
     }
 }
 
-function mouseClicked() {
-    incrementScene();
-}
+function mouseClicked() {}
 
 function incrementScene() {
     if (currentSceneIndex == scenes.length - 1) {
